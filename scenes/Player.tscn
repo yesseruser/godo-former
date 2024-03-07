@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccyblegj717ng"]
+[gd_scene load_steps=4 format=3 uid="uid://ccyblegj717ng"]
 
+[ext_resource type="Script" path="res://scenes/Player.gd" id="1_hkpqf"]
 [ext_resource type="Texture2D" uid="uid://cifb52k13ig7p" path="res://Pixel Adventure 1/Free/Main Characters/Ninja Frog/Jump (32x32).png" id="1_hne5j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m84aa"]
@@ -7,6 +8,7 @@ radius = 19.5
 height = 66.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_hkpqf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
