@@ -195,10 +195,11 @@ animations = [{
 radius = 19.5
 height = 66.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("sprite_2d")]
 script = ExtResource("1_hkpqf")
+sprite_2d = NodePath("AnimatedSprite2D")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_rhfgl")
