@@ -7,6 +7,7 @@ const UP = Vector2.UP
 @export var stop_step := 40.0
 @export var jump_velocity := -800.0
 @export var sprite_2d: AnimatedSprite2D
+@export var death_height:= 300.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -37,4 +38,11 @@ func _physics_process(delta):
 	if velocity.x != 0: # Make player stay facing left if they stopped.
 		var isLeft = velocity.x < 0
 		sprite_2d.flip_h = isLeft
+		
+	if position.y > death_height:
+		die()
 	
+
+func die():
+	print("Died!")
+	get_tree().reload_current_scene()

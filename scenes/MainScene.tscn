@@ -609,3 +609,4 @@ layer_0/tile_data = PackedInt32Array(655360, 393216, 0, 589824, 393216, 1, 65536
 
 [node name="Player" parent="." instance=ExtResource("3_vfcdf")]
 position = Vector2(229, 393)
+death_height = 1000.0
